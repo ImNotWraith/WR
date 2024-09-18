@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden; /* Ensure the moving cloud stays within the viewport */
+  }
+  
+  .cloud {
+    position: absolute;
+    top: 0; /* Start at the top of the viewport */
+    background: url('images/cloud.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.8;
+    z-index: 0; /* Ensure it is behind the content */
+    animation: moveClouds linear infinite;
+  }
+  
+  /* Clouds with different speeds and starting positions */
+  .cloud1 {
+    left: -300px; /* Start off the left side */
+    animation-duration: 50s; /* Adjusted speed */
+    top: 10%;
+    width: 200px;
+    height: 100px;
+  }
+  
+  .cloud2 {
+    left: 20%;
+    animation-duration: 60s; /* Adjusted speed */
+    top: 30%;
+    width: 180px;
+    height: 90px;
+  }
+  
+  .cloud3 {
+    left: 50%;
+    animation-duration: 70s; /* Adjusted speed */
+    top: 20%;
+    width: 220px;
+    height: 110px;
+  }
+  
+  .cloud4 {
+    left: 80%;
+    animation-duration: 80s; /* Adjusted speed */
+    top: 50%;
+    width: 200px;
+    height: 100px;
+  }
+  
+  .cloud5 {
+    left: -250px; /* Start off the left side */
+    animation-duration: 90s; /* Adjusted speed */
+    top: 60%;
+    width: 240px;
+    height: 120px;
+  }
+  
+  /* Keyframes to move clouds from left to right */
+  @keyframes moveClouds {
+    from {
+      transform: translateX(-100%); /* Start from left side */
+    }
+    to {
+      transform: translateX(100%); /* Move to right side */
+    }
+  }
+  
+  .container {
+    background-color: #282727;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Ensure it is above the clouds */
+    z-index: 1; /* Ensure it stays above the cloud images */
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .role {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
+  .contact, .links, .discord-section {
+    margin: 10px 0;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .discord-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #5865f2;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .discord-btn:hover {
+    background-color: #4752c4;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .discord-btn:active {
+    background-color: #3c45a5;
+    box-shadow: none;
+  }
+  
+  .discord-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.5);
+  }
+  
