@@ -10,7 +10,7 @@
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: url('images/background.png') no-repeat center center fixed;
+    background: url('background.png') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     overflow: hidden; /* Ensure the moving cloud stays within the viewport */
@@ -19,7 +19,7 @@
   .cloud {
     position: absolute;
     top: 0; /* Start at the top of the viewport */
-    background: url('images/cloud.png') no-repeat center center;
+    background: url('cloud.png') no-repeat center center;
     background-size: cover;
     opacity: 0.8;
     z-index: 0; /* Ensure it is behind the content */
